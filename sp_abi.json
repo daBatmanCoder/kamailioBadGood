@@ -1,0 +1,315 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "uint32",
+                "name": "_levels",
+                "type": "uint32"
+            },
+            {
+                "internalType": "contract IHasher",
+                "name": "_hasher",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IVerifier",
+                "name": "_verifier",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IMetadata",
+                "name": "_metadataContract",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IServiceProviders",
+                "name": "_spsContract",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IPalo",
+                "name": "_fundsContract",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IAyala",
+                "name": "_ayalaContract",
+                "type": "address"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "_serviceProviderNode",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "string",
+                "name": "_metaData",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_serviceProviderDomain",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "payable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": False,
+        "inputs": [
+            {
+                "indexed": False,
+                "internalType": "address",
+                "name": "subscriptionContract",
+                "type": "address"
+            }
+        ],
+        "name": "showAddress",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "INDEX_OF_METADATA",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "SERVICE_PROVIDER_DOMAIN",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "SERVICE_PROVIDER_NODE",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_setupFee",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_monthlyFee",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_metaData",
+                "type": "string"
+            }
+        ],
+        "name": "addProduct",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_commitmentDeposit",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_productID",
+                "type": "uint256"
+            }
+        ],
+        "name": "createSubscription",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256[2]",
+                "name": "_proof_a",
+                "type": "uint256[2]"
+            },
+            {
+                "internalType": "uint256[2][2]",
+                "name": "_proof_b",
+                "type": "uint256[2][2]"
+            },
+            {
+                "internalType": "uint256[2]",
+                "name": "_proof_c",
+                "type": "uint256[2]"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_nullifierHash",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_root",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_productID",
+                "type": "uint256"
+            }
+        ],
+        "name": "extendSubscription",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_productID",
+                "type": "uint256"
+            }
+        ],
+        "name": "getProductMetaData",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getServiceProviderDomain",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getServiceProviderMetadata",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "ens",
+                "type": "string"
+            }
+        ],
+        "name": "isUserValid",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256[2]",
+                "name": "_proof_a",
+                "type": "uint256[2]"
+            },
+            {
+                "internalType": "uint256[2][2]",
+                "name": "_proof_b",
+                "type": "uint256[2][2]"
+            },
+            {
+                "internalType": "uint256[2]",
+                "name": "_proof_c",
+                "type": "uint256[2]"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_nullifierHash",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_root",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "ens",
+                "type": "string"
+            }
+        ],
+        "name": "startSubscription",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "_signature",
+                "type": "bytes"
+            },
+            {
+                "internalType": "string",
+                "name": "_messageSigned",
+                "type": "string"
+            },
+            {
+                "internalType": "bytes",
+                "name": "_ENSNode",
+                "type": "bytes"
+            }
+        ],
+        "name": "updateNewServiceProvider",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]
+
