@@ -42,320 +42,7 @@ contract_address_of_ens = config['contract_address_of_ens']
 # contract_abi_of_ens = [{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":False,"inputs":[{"indexed":True,"internalType":"address","name":"owner","type":"address"},{"indexed":True,"internalType":"address","name":"operator","type":"address"},{"indexed":False,"internalType":"bool","name":"approved","type":"bool"}],"name":"ApprovalForAll","type":"event"},{"anonymous":False,"inputs":[{"indexed":True,"internalType":"bytes32","name":"node","type":"bytes32"},{"indexed":True,"internalType":"bytes32","name":"label","type":"bytes32"},{"indexed":False,"internalType":"address","name":"owner","type":"address"}],"name":"NewOwner","type":"event"},{"anonymous":False,"inputs":[{"indexed":True,"internalType":"bytes32","name":"node","type":"bytes32"},{"indexed":False,"internalType":"address","name":"resolver","type":"address"}],"name":"NewResolver","type":"event"},{"anonymous":False,"inputs":[{"indexed":True,"internalType":"bytes32","name":"node","type":"bytes32"},{"indexed":False,"internalType":"uint64","name":"ttl","type":"uint64"}],"name":"NewTTL","type":"event"},{"inputs":[{"internalType":"address","name":"operator","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setApprovalForAll","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes32","name":"node","type":"bytes32"},{"internalType":"address","name":"owner","type":"address"}],"name":"setOwner","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes32","name":"node","type":"bytes32"},{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"resolver","type":"address"},{"internalType":"uint64","name":"ttl","type":"uint64"}],"name":"setRecord","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes32","name":"node","type":"bytes32"},{"internalType":"address","name":"resolver","type":"address"}],"name":"setResolver","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes32","name":"node","type":"bytes32"},{"internalType":"bytes32","name":"label","type":"bytes32"},{"internalType":"address","name":"owner","type":"address"}],"name":"setSubnodeOwner","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes32","name":"node","type":"bytes32"},{"internalType":"bytes32","name":"label","type":"bytes32"},{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"resolver","type":"address"},{"internalType":"uint64","name":"ttl","type":"uint64"}],"name":"setSubnodeRecord","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes32","name":"node","type":"bytes32"},{"internalType":"uint64","name":"ttl","type":"uint64"}],"name":"setTTL","outputs":[],"stateMutability":"nonpayable","type":"function"},{"anonymous":False,"inputs":[{"indexed":True,"internalType":"bytes32","name":"node","type":"bytes32"},{"indexed":False,"internalType":"address","name":"owner","type":"address"}],"name":"Transfer","type":"event"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"operator","type":"address"}],"name":"isApprovedForAll","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes32","name":"node","type":"bytes32"}],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes32","name":"node","type":"bytes32"}],"name":"recordExists","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes32","name":"node","type":"bytes32"}],"name":"resolver","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes32","name":"node","type":"bytes32"}],"name":"ttl","outputs":[{"internalType":"uint64","name":"","type":"uint64"}],"stateMutability":"view","type":"function"}]
 
 contract_address_of_sp = config['contract_address_of_sp']
-contract_abi_of_sp = [
-	{
-		"inputs": [
-			{
-				"internalType": "uint32",
-				"name": "_levels",
-				"type": "uint32"
-			},
-			{
-				"internalType": "contract IHasher",
-				"name": "_hasher",
-				"type": "address"
-			},
-			{
-				"internalType": "contract IVerifier",
-				"name": "_verifier",
-				"type": "address"
-			},
-			{
-				"internalType": "contract IMetadata",
-				"name": "_metadataContract",
-				"type": "address"
-			},
-			{
-				"internalType": "contract IServiceProviders",
-				"name": "_spsContract",
-				"type": "address"
-			},
-			{
-				"internalType": "contract IPalo",
-				"name": "_fundsContract",
-				"type": "address"
-			},
-			{
-				"internalType": "contract IAyala",
-				"name": "_ayalaContract",
-				"type": "address"
-			},
-			{
-				"internalType": "bytes32",
-				"name": "_serviceProviderNode",
-				"type": "bytes32"
-			},
-			{
-				"internalType": "string",
-				"name": "_metaData",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_serviceProviderDomain",
-				"type": "string"
-			}
-		],
-		"stateMutability": "payable",
-		"type": "constructor"
-	},
-	{
-		"anonymous": False,
-		"inputs": [
-			{
-				"indexed": False,
-				"internalType": "address",
-				"name": "subscriptionContract",
-				"type": "address"
-			}
-		],
-		"name": "showAddress",
-		"type": "event"
-	},
-	{
-		"inputs": [],
-		"name": "INDEX_OF_METADATA",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "SERVICE_PROVIDER_DOMAIN",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "SERVICE_PROVIDER_NODE",
-		"outputs": [
-			{
-				"internalType": "bytes32",
-				"name": "",
-				"type": "bytes32"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_setupFee",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_monthlyFee",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "_metaData",
-				"type": "string"
-			}
-		],
-		"name": "addProduct",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_commitmentDeposit",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_productID",
-				"type": "uint256"
-			}
-		],
-		"name": "createSubscription",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256[2]",
-				"name": "_proof_a",
-				"type": "uint256[2]"
-			},
-			{
-				"internalType": "uint256[2][2]",
-				"name": "_proof_b",
-				"type": "uint256[2][2]"
-			},
-			{
-				"internalType": "uint256[2]",
-				"name": "_proof_c",
-				"type": "uint256[2]"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_nullifierHash",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_root",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_productID",
-				"type": "uint256"
-			}
-		],
-		"name": "extendSubscription",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_productID",
-				"type": "uint256"
-			}
-		],
-		"name": "getProductMetaData",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "getServiceProviderDomain",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "getServiceProviderMetadata",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "ens",
-				"type": "string"
-			}
-		],
-		"name": "isUserValid",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "pure",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256[2]",
-				"name": "_proof_a",
-				"type": "uint256[2]"
-			},
-			{
-				"internalType": "uint256[2][2]",
-				"name": "_proof_b",
-				"type": "uint256[2][2]"
-			},
-			{
-				"internalType": "uint256[2]",
-				"name": "_proof_c",
-				"type": "uint256[2]"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_nullifierHash",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_root",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "ens",
-				"type": "string"
-			}
-		],
-		"name": "startSubscription",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "bytes",
-				"name": "_signature",
-				"type": "bytes"
-			},
-			{
-				"internalType": "string",
-				"name": "_messageSigned",
-				"type": "string"
-			},
-			{
-				"internalType": "bytes",
-				"name": "_ENSNode",
-				"type": "bytes"
-			}
-		],
-		"name": "updateNewServiceProvider",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	}
-]
+contract_abi_of_sp = [{"inputs": [{"internalType": "uint32", "name": "_levels", "type": "uint32"}, {"internalType": "contract IHasher", "name": "_hasher", "type": "address"}, {"internalType": "contract IVerifier", "name": "_verifier", "type": "address"}, {"internalType": "contract IMetadata", "name": "_metadataContract", "type": "address"}, {"internalType": "contract IServiceProviders", "name": "_spsContract", "type": "address"}, {"internalType": "contract IPalo", "name": "_fundsContract", "type": "address"}, {"internalType": "contract IAyala", "name": "_ayalaContract", "type": "address"}, {"internalType": "bytes32", "name": "_serviceProviderNode", "type": "bytes32"}, {"internalType": "string", "name": "_metaData", "type": "string"}, {"internalType": "string", "name": "_serviceProviderDomain", "type": "string"}], "stateMutability": "payable", "type": "constructor"}, {"anonymous": False, "inputs": [{"indexed": True, "internalType": "address", "name": "admin", "type": "address"}, {"indexed": False, "internalType": "bool", "name": "isAdded", "type": "bool"}], "name": "AdminChanged", "type": "event"}, {"anonymous": False, "inputs": [{"indexed": False, "internalType": "address", "name": "subscriptionContract", "type": "address"}], "name": "showAddress", "type": "event"}, {"anonymous": False, "inputs": [{"indexed": False, "internalType": "string", "name": "ens", "type": "string"}], "name": "showENS", "type": "event"}, {"inputs": [{"internalType": "string", "name": "", "type": "string"}], "name": "GSM", "outputs": [{"internalType": "address", "name": "", "type": "address"}], "stateMutability": "view", "type": "function"}, {"inputs": [], "name": "INDEX_OF_METADATA", "outputs": [{"internalType": "uint256", "name": "", "type": "uint256"}], "stateMutability": "view", "type": "function"}, {"inputs": [], "name": "OWNER", "outputs": [{"internalType": "address", "name": "", "type": "address"}], "stateMutability": "view", "type": "function"}, {"inputs": [], "name": "SERVICE_PROVIDER_DOMAIN", "outputs": [{"internalType": "string", "name": "", "type": "string"}], "stateMutability": "view", "type": "function"}, {"inputs": [], "name": "SERVICE_PROVIDER_NODE", "outputs": [{"internalType": "bytes32", "name": "", "type": "bytes32"}], "stateMutability": "view", "type": "function"}, {"inputs": [{"internalType": "address", "name": "_admin", "type": "address"}], "name": "addAdmin", "outputs": [], "stateMutability": "nonpayable", "type": "function"}, {"inputs": [{"internalType": "string", "name": "gsm_number", "type": "string"}, {"internalType": "string", "name": "gsm_metadata", "type": "string"}], "name": "addGSM", "outputs": [], "stateMutability": "nonpayable", "type": "function"}, {"inputs": [{"internalType": "uint256", "name": "_setupFee", "type": "uint256"}, {"internalType": "uint256", "name": "_monthlyFee", "type": "uint256"}, {"internalType": "string", "name": "_metaData", "type": "string"}], "name": "addProduct", "outputs": [], "stateMutability": "payable", "type": "function"}, {"inputs": [{"internalType": "address", "name": "", "type": "address"}], "name": "admins", "outputs": [{"internalType": "bool", "name": "", "type": "bool"}], "stateMutability": "view", "type": "function"}, {"inputs": [{"internalType": "uint256", "name": "_commitmentDeposit", "type": "uint256"}, {"internalType": "uint256", "name": "_productID", "type": "uint256"}], "name": "createSubscription", "outputs": [], "stateMutability": "nonpayable", "type": "function"}, {"inputs": [{"internalType": "uint256[2]", "name": "_proof_a", "type": "uint256[2]"}, {"internalType": "uint256[2][2]", "name": "_proof_b", "type": "uint256[2][2]"}, {"internalType": "uint256[2]", "name": "_proof_c", "type": "uint256[2]"}, {"internalType": "uint256", "name": "_nullifierHash", "type": "uint256"}, {"internalType": "uint256", "name": "_root", "type": "uint256"}, {"internalType": "uint256", "name": "_productID", "type": "uint256"}], "name": "extendSubscription", "outputs": [], "stateMutability": "nonpayable", "type": "function"}, {"inputs": [{"internalType": "uint256", "name": "_productID", "type": "uint256"}], "name": "getProductMetaData", "outputs": [{"internalType": "string", "name": "", "type": "string"}], "stateMutability": "view", "type": "function"}, {"inputs": [], "name": "getServiceProviderDomain", "outputs": [{"internalType": "string", "name": "", "type": "string"}], "stateMutability": "view", "type": "function"}, {"inputs": [], "name": "getServiceProviderMetadata", "outputs": [{"internalType": "string", "name": "", "type": "string"}], "stateMutability": "view", "type": "function"}, {"inputs": [{"internalType": "string", "name": "ens", "type": "string"}], "name": "isUserValid", "outputs": [{"internalType": "bool", "name": "", "type": "bool"}], "stateMutability": "pure", "type": "function"}, {"inputs": [{"internalType": "string", "name": "gsm_number", "type": "string"}, {"internalType": "address", "name": "user_address", "type": "address"}], "name": "listGSM", "outputs": [], "stateMutability": "nonpayable", "type": "function"}, {"inputs": [{"internalType": "address", "name": "_admin", "type": "address"}], "name": "removeAdmin", "outputs": [], "stateMutability": "nonpayable", "type": "function"}, {"inputs": [{"internalType": "uint256[2]", "name": "_proof_a", "type": "uint256[2]"}, {"internalType": "uint256[2][2]", "name": "_proof_b", "type": "uint256[2][2]"}, {"internalType": "uint256[2]", "name": "_proof_c", "type": "uint256[2]"}, {"internalType": "uint256", "name": "_nullifierHash", "type": "uint256"}, {"internalType": "uint256", "name": "_root", "type": "uint256"}, {"internalType": "string", "name": "ens", "type": "string"}], "name": "startSubscription", "outputs": [], "stateMutability": "nonpayable", "type": "function"}, {"inputs": [{"internalType": "string", "name": "str", "type": "string"}], "name": "stringToUint", "outputs": [{"internalType": "uint256", "name": "", "type": "uint256"}], "stateMutability": "pure", "type": "function"}, {"inputs": [{"internalType": "bytes", "name": "_signature", "type": "bytes"}, {"internalType": "string", "name": "_messageSigned", "type": "string"}, {"internalType": "bytes32", "name": "_ENSNode", "type": "bytes32"}], "name": "updateNewServiceProvider", "outputs": [], "stateMutability": "nonpayable", "type": "function"}]
 
 def get_owner_of_ens(ens):
 
@@ -403,15 +90,16 @@ def keccak256(data):
     return k.digest()
 
 def namehash(name):
-    if name == '':
-        return '0x' + '00' * 32  # Return keccak256 hash of empty string for the root node
-    else:
-        labels = name.split('.')
-        labels.reverse()
-        hash = bytes.fromhex('00' * 32)  # Start with hash of empty label
-        for label in labels:
-            hash = keccak256(hash + keccak256(label.encode('utf-8')))
-        return '0x' + hash.hex()
+	name = name.lower()
+	if name == '':
+		return '0x' + '00' * 32  # Return keccak256 hash of empty string for the root node
+	else:
+		labels = name.split('.')
+		labels.reverse()
+		hash = bytes.fromhex('00' * 32)  # Start with hash of empty label
+		for label in labels:
+			hash = keccak256(hash + keccak256(label.encode('utf-8')))
+		return '0x' + hash.hex()
 
 
 @method
@@ -457,9 +145,17 @@ def check_if_user_valid(ens, sign, message_signed)  -> str:
 	user_address_from_sign = verify_signature(message_signed, sign)
 	print("user address from sign: " + user_address_from_sign)
      
-	user_address_from_ens = get_owner_of_ens(ens)
+	if ens.isdigit():
+		user_address_from_ens = get_gsm_address(ens)
+	else:
+		user_address_from_ens = get_owner_of_ens(ens)
+
+            
 	print("user address from ens: " + user_address_from_ens)
-      
+
+	if user_address_from_ens == "0x0000000000000000000000000000000000000000":
+		print("invalid ENS")
+		return "404"
 
 	if user_address_from_ens == user_address_from_sign: #and is_user_valid_with_subscription(ens):
             
@@ -469,6 +165,21 @@ def check_if_user_valid(ens, sign, message_signed)  -> str:
 		print("The user is not the owner of the NFT")
 		return "404"
 
+
+def get_gsm_address(gsm_number):
+
+	sp_address_local = "0x4d0504ad5F5b931334A695a5E43AE184713aBFb2"
+
+	# Create the contract instance
+	contract = w3.eth.contract(address=sp_address_local, abi=contract_abi_of_sp)
+
+	# Make the GET call
+	result = contract.functions.GSM(gsm_number).call()
+
+	if result == "":
+		return "404"
+
+	return result 
 
 def is_user_valid_with_subscription(ens):
       
